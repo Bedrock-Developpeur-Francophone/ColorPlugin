@@ -2,3 +2,4 @@ endstone
 setuptools
 bstream
 bedrock_protocol
+pipx
