@@ -1,5 +1,8 @@
 # 🎨 ColorPlugin
 
+[![License](https://img.shields.io/badge/License-GPL--2.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.0.2-green.svg)]
+
 > ✨ **Personalize your Minecraft experience with custom player name colors!**
 
 A powerful Minecraft Bedrock Edition plugin for Endstone servers that lets players customize the color of other players' nicknames. All color changes are client-side and only visible to you - create your own unique visual experience! 🌈
