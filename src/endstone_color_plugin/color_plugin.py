@@ -37,7 +37,7 @@ class ColorPlugin(Plugin):
 
     names_color = {}
     clock = 0
-    colors = ['', '§c', '§e', '§a', '§d', '§b', '§u']
+    colors = ['', '§c', '§e', '§a', '§d', '§b', '§u', '§9']
 
     def run_clock(self):
 
@@ -78,7 +78,7 @@ class ColorPlugin(Plugin):
                                     f'{player_target.name}' : color
                                 }
 
-                    player.send_form(ActionForm('Colors', 'Choose a color:', [Button('Reset'), Button('§cRed'), Button('§eYellow'), Button('§aGreen'), Button('§dPink'), Button('§bBlue'), Button('§uPurple')], formColors))
+                    player.send_form(ActionForm('Colors', 'Choose a color:', [Button('Reset'), Button('§cRed'), Button('§eYellow'), Button('§aGreen'), Button('§dPink'), Button('§bBlue'), Button('§uPurple'), Button('§9Blue Dark')], formColors))
                 else:
                     player.send_error_message(' '.join(command.usages))
                     return False
