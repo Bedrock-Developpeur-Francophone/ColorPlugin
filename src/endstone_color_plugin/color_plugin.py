@@ -11,7 +11,7 @@ class ColorPlugin(Plugin):
     commands = {
         "color" : {
             "description" : "Configures the color of a player.",
-            "usages" : ["/color [player: player]"],
+            "usages" : ["/color [player: player] <player: player> <player: player> <player: player> <player: player> <player: player> <player: player> <player: player>"],
             "permissions" : ["color.command.default"]
         },
         "listcolor" : {
@@ -59,19 +59,24 @@ class ColorPlugin(Plugin):
                 player: Player = sender
 
                 if(len(args) > 0):
-                    player_target : Player = self.server.get_player(args[0])
+                    players = []
+                    for arg in args:
+                        player_target : Player = self.server.get_player(arg)
 
-                    if player_target == None:
-                        player.send_error_message('§cPlayer not found!')
-                        return False
+                        if player_target == None:
+                            player.send_error_message('§cPlayer not found!')
+                            return False
+
+                        players.append(player_target)
 
                     def formColors(player : Player, color: int):
-                        if player.name in self.names_color:
-                            self.names_color[player.name][f'{player_target.name}'] = color
-                        else:
-                            self.names_color[player.name] = {
-                                f'{player_target.name}' : color
-                            }
+                        for player_target in players:
+                            if player.name in self.names_color:
+                                self.names_color[player.name][f'{player_target.name}'] = color
+                            else:
+                                self.names_color[player.name] = {
+                                    f'{player_target.name}' : color
+                                }
 
                     player.send_form(ActionForm('Colors', 'Choose a color:', [Button('Reset'), Button('§cRed'), Button('§eYellow'), Button('§aGreen'), Button('§dPink'), Button('§bBlue'), Button('§uPurple')], formColors))
                 else:
