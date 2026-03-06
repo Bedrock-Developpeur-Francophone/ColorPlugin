@@ -11,7 +11,7 @@ class ColorPlugin(Plugin):
     commands = {
         "color" : {
             "description" : "Configures the color of a player.",
-            "usages" : ["/color [player: player] <player: player> <player: player> <player: player> <player: player> <player: player> <player: player> <player: player>"],
+            "usages" : ["/color <player: player> [player2: player] [player3: player] [player4: player] [player5: player]"],
             "permissions" : ["color.command.default"]
         },
         "listcolor" : {
