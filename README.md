@@ -1,7 +1,7 @@
 # 🎨 ColorPlugin
 
 [![License](https://img.shields.io/badge/License-GPL--2.0-blue.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-0.0.2-green.svg)
+![Version](https://img.shields.io/badge/version-0.0.3-green.svg)
 
 > ✨ **Personalize your Minecraft experience with custom player name colors!**
 
