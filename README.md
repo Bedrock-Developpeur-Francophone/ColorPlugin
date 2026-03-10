@@ -87,16 +87,6 @@ Display your complete list of colored players.
 
 ---
 
-## ⚙️ Technical Details
-
-| Property | Value |
-|----------|-------|
-| 🔧 API Version | 0.10 |
-| 🎮 Server Type | Minecraft Bedrock Edition (Endstone) |
-| 🐍 Python Version | 3.9+ |
-| 📦 Package Name | endstone-color-plugin |
-| 🔖 Current Version | 0.0.2 |
-
 ### 📚 Dependencies
 
 - **endstone**: Core server framework
