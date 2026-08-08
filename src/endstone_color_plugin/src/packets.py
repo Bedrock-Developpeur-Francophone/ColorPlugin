@@ -26,14 +26,19 @@ class SetActorDataPacket(Packet):
     def write(self, stream: BinaryStream) -> None:
         stream.write_unsigned_varint64(self.targetRuntimeId)
         stream.write_unsigned_varint(len(self.actorData))
+
         for item in self.actorData:
             stream.write_unsigned_varint(item["id"])
             stream.write_unsigned_varint(item["type"])
+            stream.write_unsigned_varint(4)
             self._write_value(stream, item["type"], item["value"])
+
         stream.write_unsigned_varint(len(self.intProperties))
+
         for prop in self.intProperties:
             stream.write_unsigned_varint(prop["index"])
             stream.write_varint(prop["value"])
+
         stream.write_unsigned_varint(len(self.floatProperties))
         for prop in self.floatProperties:
             stream.write_unsigned_varint(prop["index"])
